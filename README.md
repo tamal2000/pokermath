@@ -1,2 +1,16 @@
 # pokermath
 maths for poker using python and R
+
+# Pre flop acction 
+
+| Position      | Situation       | Raise                                                                        | Call                                                                        | Fold | Comments                                                                                       |
+|---------------|-----------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------|------|------------------------------------------------------------------------------------------------|
+| Under The Gun | NA              | Pairs: `TT+`, Unpaired: `AQ+`                                                | Pairs:  `66+` , Unpaired:  `A10+`                                           | rest | __DO NOT__ play `A9`, `QK`.                                                                    |
+| Blind         | Nobody raised   | Pairs:  `66+` , Unpaired:  `A10+`                                            | na                                                                          | Fold |                                                                                                |
+|               | Someone Raised  | Pairs:  `66+` , Unpaired:  `A10+`                                            | `Suited Connector` like `8h,9h` or `Suited high cards` like `Ks,10s`.       |      | In case of having lot of chips, risk can be taken for `Suited one gappers` and `medium pairs`. |
+| Mid Position  | Everyone folded | paired: `77+`, non-paired: `AJ+ or TQ+`                                      | `up to 99` or `10s, Qs` or `suited connector`                               |      |                                                                                                |
+|               | Someone called  |                                                                              | `up to 99` or `10s, Qs` or `suited connector`.                              |      |                                                                                                |
+|               | Someone raised  | pairs: `88+` or un-pairs: `AQ+`                                              | `Suited Connector` or pair below `99`                                       |      |                                                                                                |
+| Button        | Everyone folded | pair `22+`, non pair `Suited As` or `A with 7+`. or `T+`, `suited connector` |                                                                             | Fold | Calling is not an option                                                                       |
+|               | Someone called  | pairs: `TT+` or un-pairs: `AJ+`                                              | with `Suited Connector` or pair below `TT`, `Suited As`, `Suited connector` |      |                                                                                                |
+|               | Someone raised  | pairs: `TT+` or un-pairs: `AJ+`                                              | `Suited Connector` or medium pair  `77`,`Suited connector`.                 |      |                                                                                                |
